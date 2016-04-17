@@ -50,7 +50,7 @@ return array(
             "<table>".
               "<tr><td>Chapters</td><td><b>$count_chapters</b></td></tr>".
               "<tr><td>Pages</td><td><b>$count_pages</b></td></tr>".
-              "<tr><td>Images</td><td><b>$count_chapters</b></td></tr>".
+              "<tr><td>Images</td><td><b>$count_images</b></td></tr>".
               "<tr><td>Files</td><td><b>$count_files</b></td></tr>".
               "<tr><td>Users</td><td><b>$count_users</b></td></tr>".
             "</table>";
