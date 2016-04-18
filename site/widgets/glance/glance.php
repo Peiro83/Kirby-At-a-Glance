@@ -32,12 +32,12 @@ return array(
               }
 
               #glance-widget tr td:first-of-type {
-                color: #666;
+                color: #555;
               }
 
               #glance-widget tr td.indent {
                 text-indent: .5em;
-                color: #888;
+                color: #999;
               }
             </style>".
 
