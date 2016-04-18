@@ -1,18 +1,22 @@
 <?php
 
+  global $site;
+  $site = site();
+
 return array(
   'title' => 'At a glance',
   'options' => array(
       array(
         'text' => 'Visit Site',
         'icon' => 'eye',
-        'link' => '',
+        'link' => $site->url(),
         'target' => '_blank'
       )
     ),
-  'html'  => function() {
+  'html' => function() {
 
-    $site = kirby()->site();
+    global $site;
+/*  $site = kirby()->site(); // $site must be global in order to place it in the link-options */
     $count_chapters = $site->pages()->count();
     $count_pages = $site->index()->count();
     $count_documents = $site->index()->files()->count();
@@ -20,7 +24,7 @@ return array(
     $count_files = $site->index()->files()->filterBy('type', 'document')->count();
     $count_users = $site->users()->count();
 
-//  $count_subpages = $site->grandchildren()->count();
+/*  $count_subpages = $site->grandchildren()->count(); // not needed, yet.. */
 
   	return  "<style>
               #glance-widget td {
@@ -28,12 +32,12 @@ return array(
               }
 
               #glance-widget tr td:first-of-type {
-                color: #555;
+                color: #666;
               }
 
               #glance-widget tr td.indent {
                 text-indent: .5em;
-                color: #777;
+                color: #888;
               }
             </style>".
 
